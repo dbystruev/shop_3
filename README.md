@@ -22,18 +22,18 @@ flutter run
 
 ### Release
 
-####Android APK
+###Android APK
 ```bash
 cd outfit_shop_client
 flutter build apk
 ```
-####App bundle
+###App bundle
 ```bash
 cd outfit_shop_client
 flutter build appbundle
 ```
 
-####IOS
+###IOS
 ```bash
 cd outfit_shop_client
 flutter build ios
