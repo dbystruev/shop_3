@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:outfit_shop_client/api/category_client.dart';
@@ -33,7 +34,11 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        localizationsDelegates: [S.delegate],
+        localizationsDelegates: [S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          DefaultCupertinoLocalizations.delegate
+        ],
         supportedLocales: S.delegate.supportedLocales,
         title: 'Get Outfit',
         theme: ThemeData.dark(
