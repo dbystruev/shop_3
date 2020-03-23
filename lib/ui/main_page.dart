@@ -110,7 +110,7 @@ class _MainPageState extends State<MainPage> {
   Widget categoryAppBar(BuildContext context, OfferBloc bloc){
     OfferState state = bloc.state;
     if(state is SearchOfferStateSuccess || state is SearchOfferStateAppendEmpty ||state is SearchOfferStateAppendLoading){
-      String title = "Товары";
+      String title = S.of(context).offerTitle;
       if(state is SearchOfferStateSuccess) print(state.category);
       if(state is SearchOfferStateSuccess && state.category != null) title = state.category.name;
       if(state is SearchOfferStateAppendLoading && state.category != null) title = state.category.name;
